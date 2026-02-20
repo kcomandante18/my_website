@@ -168,6 +168,21 @@ a:hover {
   margin: 40px auto 60px;
 }
 
+.resume-viewer {
+  width: min(900px, 92%);
+  margin: 30px auto 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.resume-frame {
+  width: 100%;
+  height: 900px;
+  border: none;
+  border-radius: 8px;
+}
+
 .copyright {
   color: #eaf6f6;
   font-size: 0.75rem;
@@ -725,5 +740,14 @@ a:hover {
     display: block;
     margin: 0 auto 10px auto;
     width: 60%;
+  }
+
+  .resume-viewer {
+    width: 96%;
+    padding: 14px;
+  }
+
+  .resume-frame {
+    height: 520px;
   }
 }

@@ -57,9 +57,15 @@
       <h2>Get In Touch</h2>
       <h3>If you love hot wings as much as I do.</h3>
       <p class="contact-message">Passionate about technology and innovation? Let's connect and learn from each other.</p>
-    <a class="btn" href="https://docs.google.com/document/d/1lT9iTuSsWw4Ra3E0iFln1zWuCeWFlkOO/edit?usp=sharing&ouid=110688061930138716311&rtpof=true&sd=true" target="_blank">
-    Contact Me
-   </a>
+      <a class="btn" href="#resume-viewer" id="resume-btn">View Resume</a>
+      <div id="resume-viewer" class="resume-viewer" hidden>
+        <h3>My Resume</h3>
+        <iframe
+          class="resume-frame"
+          src="./index_files/resume.pdf#view=FitH"
+          title="Karen resume"
+        ></iframe>
+      </div>
     </div>
     </div>
   </div>
@@ -74,4 +80,23 @@
   </div>
 
 </body>
+<script>
+  const resumeButton = document.getElementById("resume-btn");
+  const resumeViewer = document.getElementById("resume-viewer");
+
+  resumeButton.addEventListener("click", function (event) {
+    event.preventDefault();
+    const isHidden = resumeViewer.hidden;
+    resumeViewer.hidden = !isHidden;
+
+    if (isHidden) {
+      resumeButton.textContent = "Hide Resume";
+      resumeViewer.scrollIntoView({ behavior: "smooth", block: "start" });
+      return;
+    }
+
+    resumeButton.textContent = "View Resume";
+    resumeButton.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
+</script>
 </html>
